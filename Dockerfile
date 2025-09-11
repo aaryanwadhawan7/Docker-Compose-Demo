@@ -13,6 +13,8 @@ RUN npm ci
 
 COPY . .
 
+ENV DATABASE_URL="postgresql://postgres:siddhant@10@localhost:5432/postgres"
+
 RUN npx prisma generate 
 
 # Ensure ur scripts has build command (inside package.json)
